@@ -1,0 +1,26 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Underfunded creators found",
+            "transformation": {
+                "fields": ["projectName", "state", "percentFunded", "creatorName", "bestEmail", "bestEmailConfidence", "bestEmailScore", "linkedSites", "projectUrl"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "projectName": {"label": "Project"},
+                    "state": {"label": "State"},
+                    "percentFunded": {"label": "% funded"},
+                    "creatorName": {"label": "Creator"},
+                    "bestEmail": {"label": "Best email"},
+                    "bestEmailConfidence": {"label": "Confidence"},
+                    "bestEmailScore": {"label": "Score"},
+                    "linkedSites": {"label": "Websites"},
+                    "projectUrl": {"label": "Project URL"}
+                }
+            }
+        }
+    }
+}
