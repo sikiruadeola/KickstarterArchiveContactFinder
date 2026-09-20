@@ -1,0 +1,10 @@
+{
+    "actorSpecification": 1,
+    "name": "kickstarter-archive-contact-finder",
+    "title": "Kickstarter Archive Contact Finder",
+    "description": "Finds contact addresses for underfunded Kickstarter creators by reading the Internet Archive's own copies of project pages, never sending a request to kickstarter.com itself.",
+    "version": "0.0",
+    "dockerfile": "../Dockerfile",
+    "input": "./input_schema.json",
+    "storages": {"dataset": "./dataset_schema.json"}
+}
