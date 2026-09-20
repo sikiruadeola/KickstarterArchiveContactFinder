@@ -140,7 +140,8 @@ function cleanLinks(urls) {
         'kickstarter.com', 'ksr-ugc.imgix.net', 'facebook.com', 'twitter.com', 'x.com',
         'instagram.com', 'google.com', 'gstatic.com', 'googleapis.com', 'apple.com',
         'play.google.com', 'youtube.com', 'youtu.be', 'schema.org', 'w3.org',
-        'archive.org', 'web.archive.org',
+        'archive.org', 'web.archive.org', 'connect.facebook.net', 'google-analytics.com',
+        'googletagmanager.com', 'doubleclick.net', 'hotjar.com', 'cloudflareinsights.com',
     ];
 
     const out = new Map();
