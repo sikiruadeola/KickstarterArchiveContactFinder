@@ -1,0 +1,68 @@
+{
+    "title": "Kickstarter Archive Contact Finder",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "categoryId": {
+            "title": "Category",
+            "type": "integer",
+            "description": "Which Kickstarter category to keep, as a category id. Design is 7, Film and Video is 10, Games is 12, Technology is 16.",
+            "editor": "number",
+            "default": 16
+        },
+        "states": {
+            "title": "Project states to include",
+            "type": "array",
+            "description": "Which state, as it was at the moment the Archive captured that page, counts as a match.",
+            "editor": "select",
+            "items": {
+                "type": "string",
+                "enum": ["live", "failed"],
+                "enumTitles": ["Live", "Failed"]
+            },
+            "default": ["live", "failed"]
+        },
+        "fromDate": {
+            "title": "Only consider snapshots captured on or after this date",
+            "type": "string",
+            "description": "Format YYYYMMDD. More recent means less stale funding numbers, but a smaller pool to search through.",
+            "editor": "textfield",
+            "default": "20250101"
+        },
+        "maxCandidates": {
+            "title": "How many archived pages to check per run",
+            "type": "integer",
+            "description": "How many candidate project pages to pull from the Archive's own listing in one run, before category and funding filtering.",
+            "editor": "number",
+            "default": 300
+        },
+        "maxProjects": {
+            "title": "Maximum matching underfunded projects to process (0 = unlimited)",
+            "type": "integer",
+            "description": "Stop enriching once this many genuinely matching projects have been found.",
+            "editor": "number",
+            "default": 0
+        },
+        "crawlCreatorSites": {
+            "title": "Also read the creator's own website",
+            "type": "boolean",
+            "description": "Reads the homepage of any linked site found on the archived page. This is where most addresses are actually found.",
+            "default": true
+        },
+        "maxPagesPerSite": {
+            "title": "Maximum pages per website",
+            "type": "integer",
+            "description": "Budget of pages per website. Six is usually plenty.",
+            "editor": "number",
+            "default": 6
+        },
+        "minimumScore": {
+            "title": "Minimum quality score to keep an address",
+            "type": "integer",
+            "description": "Zero to one hundred. Fifty five keeps medium and high confidence, seventy five keeps high confidence only.",
+            "editor": "number",
+            "default": 0
+        }
+    },
+    "required": ["categoryId"]
+}
