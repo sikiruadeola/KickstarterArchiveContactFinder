@@ -1,0 +1,14 @@
+{
+    "name": "kickstarter-archive-contact-finder",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Finds Kickstarter contact addresses using the Internet Archive's own copies of project pages, never touching kickstarter.com.",
+    "engines": {"node": ">=18"},
+    "dependencies": {
+        "apify": "^3.2.6",
+        "crawlee": "^3.11.5",
+        "cheerio": "^1.0.0"
+    },
+    "scripts": {"start": "node src/main.js"},
+    "license": "MIT"
+}
